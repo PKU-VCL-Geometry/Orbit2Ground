@@ -1,0 +1,123 @@
+/* Video Comparison Styles */
+.video-compare-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  line-height: 0;
+}
+
+.video-compare-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* The bottom video (Ours) will be relative to set the container size */
+#video-ours {
+  display: block;
+  width: 100%;
+}
+
+/* The top video (Baseline) will be inside the clipper */
+.video-clipper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%; /* Initial split */
+  overflow: hidden;
+  z-index: 1;
+  border-right: 2px solid white; /* Divider line */
+}
+
+/* The video inside the clipper needs to be full width of the CONTAINER */
+.video-clipper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Width is set by JS to match container */
+  max-width: none; 
+  height: 100%;
+}
+
+.video-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 40px; /* Hit area width */
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The Handle Circle */
+.video-slider::after {
+  content: '\f337'; /* fa-arrows-alt-h */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #4a4a4a;
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+}
+
+/* Button active state */
+.button.is-selected {
+  background-color: #3273dc !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Loading Overlay */
+.video-compare-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.video-compare-loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-compare-loading::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #3273dc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

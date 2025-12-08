@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNIGASODSIJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-SNIGASODSIJ');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro|Inter:wght@300;400;600;800|Space+Grotesk:wght@300;500;700"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/comparison.css">
+  <link rel="stylesheet" href="./static/css/gallery.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/comparison.js"></script>
+</head>
+<body>
+<section class="hero is-fullscreen has-video-bg">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="./static/videos/bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-body" style="display: flex; align-items: center; justify-content: center;">
+    <div class="container is-max-desktop glass-card">
+      <!-- <div style="text-align: center;">
+        <img src="static/images/trademark.png" alt="Amap Inc." style="height: 60px; filter: invert(1);" />
+      </div> -->
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+            From 
+            <img src="static/images/favicon.svg" style="height: 60px;" />
+            <span style="color: rgb(68, 147, 244);">Orbit</span> to <span style="color: rgb(239, 191, 70);">Ground</span>: <br> Generative City Photogrammetry from <br> </b>Extreme Off-Nadir Satellite Images
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://maxmilite.github.io/">Fei Yu</a><sup>1,2,4*</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=XchgHFoAAAAJ">Yu Liu</a><sup>2*</sup>,</span>
+            <span class="author-block"><a href="https://github.com/mush-room">Luyang Tang</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=bqsITKQAAAAJ">Mingchao Sun</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://github.com/boolwater">Zengye Ge</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=YMRzlkMAAAAJ">Rui Bu</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://nobodywant2try.github.io/">Yuchao Jin</a><sup>1</sup>,</span>
+            <br>
+            <span class="author-block"><a href="https://haisenzhao.github.io/">Haisen Zhao</a><sup>4</sup>,</span>
+            <span class="author-block"><a href="https://ai4scientificimaging.org/">He Sun</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://yangyan.li/">Yangyan Li</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=JGi4S0EAAAAJ">Mu Xu</a><sup>2†</sup>,</span>
+            <span class="author-block"><a href="https://wenzhengchen.github.io/">Wenzheng Chen</a><sup>1†</sup>,</span>
+            <span class="author-block"><a href="http://baoquanchen.info/">Baoquan Chen</a><sup>1†</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Peking University</span>
+            &nbsp;
+            <span class="author-block"><sup>2</sup>AMAP</span>
+            &nbsp;
+            <span class="author-block"><sup>3</sup>Ant Group</span>
+            &nbsp;
+            <span class="author-block"><sup>4</sup>Shandong University</span>
+          </div>
+          <div class="is-size-6" style="margin-top: 0.5em;">
+            <span class="author-block"><sup>*</sup>Joint first authors.</span>
+            <span class="author-block"><sup>†</sup>Corresponding authors.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-down-indicator">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" loop playsinline controls height="100%">
+        <source src="./static/videos/teaser-compressed.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="margin-top: 0.5em;">
+        <span style="font-weight: bold;">
+          TL;DR: 
+        </span>
+        Our method enables photorealistic city-scale 3D reconstruction from satellite imagery.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            City-scale 3D reconstruction from satellite imagery presents the challenge of
+            <b>extreme viewpoint extrapolation</b>, where our goal is to synthesize ground-level
+            novel views from sparse orbital images with minimal parallax. This requires inferring
+            nearly 90&deg; viewpoint gaps from image sources with severely foreshortened facades and
+            flawed textures, causing state-of-the-art reconstruction engines such as NeRF and 3DGS
+            to fail.
+          </p>
+          <p>
+            To address this problem, we propose two design choices tailored for city structures
+            and satellite inputs. First, we model city geometry as a 2.5D height map, implemented
+            as a Z-monotonic signed distance field (SDF) that matches urban building layouts from
+            top-down viewpoints. This stabilizes geometry optimization under sparse, off-nadir
+            satellite views and yields a watertight mesh with crisp roofs and clean, vertically
+            extruded facades. Second, we paint the mesh appearance from satellite images via
+            differentiable rendering techniques. While the satellite inputs may contain long-range,
+            blurry captures, we further train a generative texture restoration network to enhance
+            the appearance, recovering high-frequency, plausible texture details from degraded
+            inputs.
+          </p>
+          <p>
+            Our method's scalability and robustness are demonstrated through extensive experiments
+            on large-scale urban reconstruction. For example, in our teaser figure, we reconstruct
+            a 4km<sup>2</sup> real-world region from only a few satellite images, achieving
+            state-of-the-art performance in synthesizing photorealistic ground views. The resulting
+            models are not only visually compelling but also serve as high-fidelity,
+            application-ready assets for downstream tasks like urban planning and simulation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Key Insight</h2>
+    <div class="content has-text-justified">
+      The primary challenge of 3D reconstruction from satellite imagery lies in <b style="color: white;">extreme viewpoint extrapolation</b>, which can be regularized by <b style="color: white;">modeling the city as a 2.5D height map</b>.
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <img src="./static/images/problem.png" alt="Problem Description" style="width:100%;">
+        <p class="content has-text-justified">
+          Unlike street views, satellite images are sparse and off-nadir, lacking parallax for vertical structures. As shown, MVS (yellow points) only recovers ground and roofs, failing on facades.
+        </p>
+      </div>
+      <div class="column">
+        <video autoplay muted loop playsinline style="width:100%;">
+          <source src="./static/videos/pc-compressed.mp4" type="video/mp4">
+        </video>
+        <p class="content has-text-justified">
+          To address this, we model the city as a 2.5D height map. This representation enforces geometric regularity, enabling the reconstruction of complete, watertight vertical facades.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Overview</h2>
+    <div class="video-container-framework">
+      <video id="framework-video" autoplay muted playsinline style="width:100%;">
+        <source src="./static/videos/framework.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="content has-text-justified">
+
+      <b>Framework.</b> Our pipeline first reconstructs city geometry, then refines its appearance.
+      <ul>
+        <li><b>Stage 1 (Geometry)</b>: We optimize a Z-Monotonic SDF from sparse MVS points to extract a high-fidelity, watertight mesh with clean vertical facades.</li>
+        <li><b>Stage 2 (Appearance)</b>: Starting with an initial texture  
+        (back-projected from source images), we use a restoration network to enhance close-range novel-view renderings, which further serve as sharp, high-fidelity supervision for final texture optimization.</li>
+      </ul>
+    </div>
+  </div>
+  
+</section>
+
+<section class="section">
+  <div class="container is-full-width" style="width: 60% !important;">
+    <h2 class="title is-3 has-text-centered">Visual Comparison</h2>
+    <div class="content has-text-justified">
+      <p>
+        Our method achieves superior performance in reconstruction quality. Please move the slider to see the difference between our results and baselines.
+      </p>
+    </div>
+
+    <!-- Mode Selection Tabs -->
+    <div class="columns is-centered" style="margin-bottom: 20px; display: flex;">
+      <div class="column has-text-centered">
+        <button class="button is-medium is-dark is-selected" style="width: 49%; padding: 0 0;" onclick="changeMode('orbit2ground', this)" id="mode-orbit2ground">
+          <span>Satellite View to Near-Ground View</span>
+        </button>
+        <button class="button is-medium is-light" style="width: 49%; padding: 0 0;" onclick="changeMode('round', this)" id="mode-round">
+          <span>Near-Ground 360&deg; Rotation</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Comparison Container -->
+    <div class="video-compare-container" id="comparison-container">
+        <div class="video-compare-loading" id="video-loading">Loading...</div>
+        <video class="video-compare-video" id="video-ours" playsinline autoplay muted loop src="./static/videos/comparison/orbit2ground/ours.mp4"></video>
+        <div class="video-clipper" id="video-clipper">
+            <video class="video-compare-video" id="video-baseline" playsinline autoplay muted loop src="./static/videos/comparison/orbit2ground/skyfall-gs.mp4"></video>
+        </div>
+        <!-- Slider Handle -->
+        <div class="video-slider" id="video-slider"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="columns is-centered" style="margin-top: 20px;">
+        <div class="column has-text-centered">
+            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('3dgs.mp4', this)" style="margin: 0 20px;">
+                <span>3DGS</span>
+            </button>
+            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('2dgs.mp4', this)" style="margin: 0 20px;">
+                <span>2DGS</span>
+            </button>
+            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('mipgs.mp4', this)" style="margin: 0 20px;">
+                <span>Mip-Splatting</span>
+            </button>
+            <button class="baseline-button external-link button is-normal is-rounded is-dark is-selected" onclick="changeBaseline('skyfall-gs.mp4', this)" style="margin: 0 20px;">
+                <span>Skyfall-GS</span>
+            </button>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-full-width">
+    <h2 class="title is-3 has-text-centered">Gallery</h2>
+    <div id="gallery-container" class="gallery-container">
+      <div class="gallery-item item-1">
+        <video poster="" id="video-1" autoplay controls muted playsinline height="100%">
+          <source src="./static/videos/gallery/1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-item item-2">
+        <video poster="" id="video-2" autoplay controls muted playsinline height="100%">
+          <source src="./static/videos/gallery/2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-item item-3">
+        <video poster="" id="video-3" autoplay controls muted playsinline height="100%">
+          <source src="./static/videos/gallery/3.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <div class="gallery-nav prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="gallery-nav next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+    <div class="gallery-dots">
+      <span class="dot dot-1" data-index="0"></span>
+      <span class="dot dot-2" data-index="1"></span>
+      <span class="dot dot-3" data-index="2"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yu2025orbit2ground,
+  author = {Fei Yu and Yu Liu and Luyang Tang and Mingchao Sun and Zengye Ge and Rui Bu and
+            Yuchao Jin and Haisen Zhao and He Sun and Yangyan Li and Mu Xu and
+            Wenzheng Chen and Baoquan Chen},
+  title = {From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images},
+  year = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer" style="padding: 1.5rem 1.5rem 1.5rem;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-80 has-text-centered">
+        <div class="content">
+          <p>
+            The template of this website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            Thanks for the author's great work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('framework-video');
+    if (video) {
+      video.addEventListener('ended', function() {
+        setTimeout(function() {
+          video.play();
+        }, 10000); // 10000ms = 10s
+      });
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.bento-card, .publication-video, .video-compare-container, .gallery-container, .title, .content');
+    elements.forEach(el => {
+      el.classList.add('fade-in-up');
+      observer.observe(el);
+    });
+    
+    // Scroll to land
+    const scrollIndicator = document.querySelector('.scroll-down-indicator');
+    if (scrollIndicator) {
+      scrollIndicator.addEventListener('click', () => {
+        const firstSection = document.querySelector('.hero.teaser');
+        if (firstSection) {
+          firstSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+           window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
