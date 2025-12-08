@@ -1,4 +1,4 @@
-# Nerfies
+# From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images
 
 This website is adapted from the [Nerfies website](https://nerfies.github.io).
 
