@@ -42,13 +42,9 @@
   <script src="./static/js/comparison.js"></script>
 </head>
 <body>
-<section class="hero is-fullscreen has-video-bg">
-  <video class="hero-video-bg" autoplay muted loop playsinline>
-    <source src="./static/videos/bg.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
+<section class="hero">
   <div class="hero-body" style="display: flex; align-items: center; justify-content: center;">
-    <div class="container is-max-desktop glass-card">
+    <div class="container is-max-desktop">
       <!-- <div style="text-align: center;">
         <img src="static/images/trademark.png" alt="Amap Inc." style="height: 60px; filter: invert(1);" />
       </div> -->
@@ -62,7 +58,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="https://maxmilite.github.io/">Fei Yu</a><sup>1,2,4*</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=XchgHFoAAAAJ">Yu Liu</a><sup>2*</sup>,</span>
-            <span class="author-block"><a href="https://github.com/mush-room">Luyang Tang</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=2A1sp-wAAAAJ">Luyang Tang</a><sup>2</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=bqsITKQAAAAJ">Mingchao Sun</a><sup>2</sup>,</span>
             <span class="author-block"><a href="https://github.com/boolwater">Zengye Ge</a><sup>2</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=YMRzlkMAAAAJ">Rui Bu</a><sup>3</sup>,</span>
@@ -107,7 +103,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (High Res.)</span>
+                  <span>Paper (High Res., 94MB)</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -127,9 +123,6 @@
       </div>
     </div>
   </div>
-  <div class="scroll-down-indicator">
-    <i class="fas fa-chevron-down"></i>
-  </div>
 </section>
 
 <section class="hero teaser">
@@ -139,6 +132,7 @@
         <source src="./static/videos/teaser-compressed.mp4"
                 type="video/mp4">
       </video>
+      <p class="is-size-6 has-text-centered">This video contains music.</p>
       <h2 class="subtitle has-text-centered" style="margin-top: 0.5em;">
         <span style="font-weight: bold;">
           TL;DR: 
@@ -255,7 +249,7 @@
         <button class="button is-medium is-dark is-selected" style="width: 49%; padding: 0 0;" onclick="changeMode('orbit2ground', this)" id="mode-orbit2ground">
           <span>Satellite View to Near-Ground View</span>
         </button>
-        <button class="button is-medium is-light" style="width: 49%; padding: 0 0;" onclick="changeMode('round', this)" id="mode-round">
+        <button class="button is-medium is-dark" style="width: 49%; padding: 0 0;" onclick="changeMode('round', this)" id="mode-round">
           <span>Near-Ground 360&deg; Rotation</span>
         </button>
       </div>
@@ -266,25 +260,27 @@
         <div class="video-compare-loading" id="video-loading">Loading...</div>
         <video class="video-compare-video" id="video-ours" playsinline autoplay muted loop src="./static/videos/comparison/orbit2ground/ours.mp4"></video>
         <div class="video-clipper" id="video-clipper">
-            <video class="video-compare-video" id="video-baseline" playsinline autoplay muted loop src="./static/videos/comparison/orbit2ground/skyfall-gs.mp4"></video>
+          <video class="video-compare-video" id="video-baseline" playsinline autoplay muted loop src="./static/videos/comparison/orbit2ground/3dgs.mp4"></video>
         </div>
         <!-- Slider Handle -->
         <div class="video-slider" id="video-slider"></div>
     </div>
 
+    <p class="is-size-6 has-text-centered" style="margin-top: 10px">The left side shows the baseline results; the right side shows our results.</p>
+
     <!-- Buttons -->
     <div class="columns is-centered" style="margin-top: 20px;">
         <div class="column has-text-centered">
-            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('3dgs.mp4', this)" style="margin: 0 20px;">
+            <button class="baseline-button external-link button is-normal is-dark is-selected" onclick="changeBaseline('3dgs.mp4', this)" style="margin: 0 20px;">
                 <span>3DGS</span>
             </button>
-            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('2dgs.mp4', this)" style="margin: 0 20px;">
+            <button class="baseline-button external-link button is-normal is-dark" onclick="changeBaseline('2dgs.mp4', this)" style="margin: 0 20px;">
                 <span>2DGS</span>
             </button>
-            <button class="baseline-button external-link button is-normal is-rounded is-dark" onclick="changeBaseline('mipgs.mp4', this)" style="margin: 0 20px;">
+            <button class="baseline-button external-link button is-normal is-dark" onclick="changeBaseline('mipgs.mp4', this)" style="margin: 0 20px;">
                 <span>Mip-Splatting</span>
             </button>
-            <button class="baseline-button external-link button is-normal is-rounded is-dark is-selected" onclick="changeBaseline('skyfall-gs.mp4', this)" style="margin: 0 20px;">
+            <button class="baseline-button external-link button is-normal is-dark" onclick="changeBaseline('skyfall-gs.mp4', this)" style="margin: 0 20px;">
                 <span>Skyfall-GS</span>
             </button>
         </div>
@@ -331,12 +327,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{yu2025orbit2ground,
-  author = {Fei Yu and Yu Liu and Luyang Tang and Mingchao Sun and Zengye Ge and Rui Bu and
-            Yuchao Jin and Haisen Zhao and He Sun and Yangyan Li and Mu Xu and
-            Wenzheng Chen and Baoquan Chen},
-  title = {From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images},
-  year = {2025},
+    <pre><code>@misc{yu2025orbit2ground,
+    title={From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images}, 
+    author={Fei Yu and Yu Liu and Luyang Tang and Mingchao Sun and Zengye Ge and Rui Bu and Yuchao Jin and Haisen Zhao and He Sun and Yangyan Li and Mu Xu and Wenzheng Chen and Baoquan Chen},
+    year={2025},
+    eprint={2512.07527},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2512.07527}, 
 }</code></pre>
   </div>
 </section>

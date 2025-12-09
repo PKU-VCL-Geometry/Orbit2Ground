@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let currentMode = 'orbit2ground';
-let currentBaseline = 'skyfall-gs.mp4';
+let currentBaseline = '3dgs.mp4';
 
 function changeMode(mode, btn) {
     currentMode = mode;
@@ -131,9 +131,9 @@ function changeMode(mode, btn) {
     const buttons = btn.parentElement.querySelectorAll('.button');
     buttons.forEach(b => {
         b.classList.remove('is-selected', 'is-dark');
-        b.classList.add('is-light');
+        b.classList.add('is-dark');
     });
-    btn.classList.remove('is-light');
+    btn.classList.remove('is-dark');
     btn.classList.add('is-selected', 'is-dark');
 
     updateVideos();
