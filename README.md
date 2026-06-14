@@ -8,9 +8,15 @@ Official repository for **From Orbit to Ground: Generative City Photogrammetry f
 
 🙏 Thank you for your interest in our work.
 
-🚀 **Code will be released soon.** Thank you for your patience and support!
+**[Update on Jun 14, 2026]**
 
-This repository is currently being prepared for public release. We are organizing the codebase, cleaning up dependencies, and polishing the documentation to make the project easier to use.
+We sincerely appreciate the community's interest in Orbit2Ground and the requests for code release.
+
+Although we originally planned to make the code publicly available, the release is currently on hold mainly due to additional constraints related to our broader project collaborations.
+
+As a result, we are unfortunately unable to provide the code or an estimated release date at this stage. We apologize for the inconvenience and truly appreciate your understanding and patience.
+
+We will update this repository if the situation changes in the future.
 
 ## Overview
 
